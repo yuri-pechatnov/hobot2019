@@ -1,0 +1,5 @@
+image: alpine
+
+job1:
+  script:
+    - if [ `grep -v '#' run.sh | wc -l` -gt 0 ]; then (cd ~/code; ./gitlab_ci_runner.py); else exit 1; fi
